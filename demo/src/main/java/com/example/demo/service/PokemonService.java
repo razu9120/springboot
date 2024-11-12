@@ -31,12 +31,14 @@ public class PokemonService {
                 List<String> types = response.getTypes().stream()
                         .map(typeSlot -> typeSlot.getType().getName())
                         .collect(Collectors.toList());
+                
+                String result = String.join(" ", types);
 
-                return new PokemonInfoDto(response.getName(), types);
+                return new PokemonInfoDto(response.getName(), result);
             }
         } catch (HttpClientErrorException e) {
             System.err.println("Error: " + e.getMessage());
         }
-        return new PokemonInfoDto("Unknown", List.of("Unknown"));
+        return new PokemonInfoDto("Unknown", "Unknown");
     }
 }

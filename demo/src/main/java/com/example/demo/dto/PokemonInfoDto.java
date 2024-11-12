@@ -1,11 +1,10 @@
 package com.example.demo.dto;
-import java.util.List;
 
 public class PokemonInfoDto {
     private String name;
-    private List<String> types;
+    private String types;
 
-    public PokemonInfoDto(String name, List<String> types) {
+    public PokemonInfoDto(String name, String types) {
         this.name = name;
         this.types = types;
     }
@@ -18,11 +17,11 @@ public class PokemonInfoDto {
         this.name = name;
     }
 
-    public List<String> getTypes() {
+    public String getTypes() {
         return types;
     }
 
-    public void setTypes(List<String> types) {
+    public void setTypes(String types) {
         this.types = types;
     }
 }
