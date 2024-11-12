@@ -22,6 +22,15 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// // WebClient用の依存関係（リアクティブサポート）
+    // implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	// // 開発用ツール（オプション）
+    // developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// // Lombok（オプション）
+    // compileOnly 'org.projectlombok:lombok'
+    // annotationProcessor 'org.projectlombok:lombok'
+
+    // testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
